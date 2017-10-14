@@ -28,3 +28,19 @@ func BenchmarkBigLen(b *testing.B) {
 		big.Len()
 	}
 }
+
+func BenchmarkTemplateParallel(b *testing.B) {
+	big := NewBig()
+	b.ResetTimer()
+	b.RunParallel(func(pb *testing.PB) {
+		for pb.Next() {
+			big.Len()
+		}
+	})
+}
+
+// for covering
+// $go test -cover
+// go tool can generate coverage profile thay may be interpreted by the cover tool.
+// $go test -coverprofile=cover.out
+// $go tool cover -func=cover.out
