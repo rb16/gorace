@@ -12,7 +12,3 @@ func AddStruct() {
 	}{0, 1}
 	_ = m.a + m.b
 }
-func main() {
-	AddMap()
-	AddStruct()
-}

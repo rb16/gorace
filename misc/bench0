@@ -1,0 +1,6 @@
+goos: darwin
+goarch: amd64
+pkg: github.com/rb16/gorace/misc
+BenchmarkHandleStructAdd-8   	   30000	     49173 ns/op
+PASS
+ok  	github.com/rb16/gorace/misc	1.996s

@@ -1,2 +1,5 @@
 .idea/
-*cover.out
+*.out
+*.mem
+*.test
+.DS_Store
